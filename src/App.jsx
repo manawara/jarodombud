@@ -7,7 +7,7 @@ function App() {
       <main>
         <Outlet />
       </main>
-      footer
+      <div className="h-[600px]">sddsss</div>
     </>
   )
 }

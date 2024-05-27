@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 
-const Counter = ({ start, end, speed, title }) => {
+const Counter = ({ start, end, speed, title, isVisible }) => {
   const [counter, setCounter] = useState({
     start: start ? start : 0,
     end: end ? end : 0,
   })
+
   useEffect(() => {
-    if (counter.end > counter.start) {
+    if (counter.end > counter.start && isVisible) {
       const timer = setInterval(
         () => {
           setCounter((prev) => ({
@@ -22,7 +23,7 @@ const Counter = ({ start, end, speed, title }) => {
         clearInterval(timer)
       }
     }
-  }, [counter, speed])
+  }, [counter, speed, isVisible])
 
   return (
     <div className="flex items-center text-inherit my-2">
