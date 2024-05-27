@@ -8,8 +8,8 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false)
 
   return (
-    <header className="p-[36px] bg-black-color-v1">
-      <Container>
+    <header className="py-[36px] bg-black-color-v1">
+      <Container padding>
         <div className="flex items-center justify-between">
           <div className="text-red-color-v1 capitalize text-2xl"> jaro dom-bud</div>
           <Nav />
