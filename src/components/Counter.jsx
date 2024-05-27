@@ -25,9 +25,9 @@ const Counter = ({ start, end, speed, title }) => {
   }, [counter, speed])
 
   return (
-    <div className="flex items-center text-inherit">
+    <div className="flex items-center text-inherit my-2">
       <div className="text-red-color-v1 font-bold text-4xl w-24 text-right">{counter.start}+</div>
-      <div className="ml-2 capitalize max-w-28">{title}</div>
+      <div className="ml-2 capitalize sm:max-w-28">{title}</div>
     </div>
   )
 }
