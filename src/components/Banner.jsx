@@ -1,10 +1,9 @@
 import Button, { ButtonSecondary } from './Button'
-import bannerImage from '../assets/construction-profe.jpeg'
 import Container from '../layout/Container'
 const Banner = () => {
   return (
     <section
-      className={`relative py-[72px] flex flex-col bg-cover bg-[url('${bannerImage}')] before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-black-color-v1 before:to-gray-600 before:opacity-75 before:z-[1]`}
+      className={`relative py-[72px] flex flex-col bg-cover bg-[url('/src/assets/construction-profe.jpeg')] before:content-[''] before:absolute before:inset-0 before:block before:bg-gradient-to-r before:from-black-color-v1 before:to-gray-600 before:opacity-75 before:z-[1]`}
     >
       <Container padding classCustom="z-[2] text-white">
         <h1 className="capitalize text-4xl font-semibold  max-w-[460px]  sm:text-6xl sm:leading-tight">
