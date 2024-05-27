@@ -1,0 +1,34 @@
+import { useState, useEffect, useCallback } from 'react'
+
+const useDetection = (delay = 300) => {
+  const [offsetElement, setOffsetElement] = useState(0)
+  const [currentTop, setCurrentTop] = useState(window.innerHeight)
+  const [isVisibleElement, setIsVisibleElement] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      let scrollTop = offsetElement - e.target.documentElement.scrollTop
+      setCurrentTop(scrollTop)
+      if (currentTop > scrollTop) {
+        setTimeout(() => {
+          setIsVisibleElement(true)
+        }, delay)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [offsetElement])
+
+  const handleSetOffset = useCallback((value) => {
+    setOffsetElement(value)
+    if (value < currentTop) {
+      setTimeout(() => {
+        setIsVisibleElement(true)
+      }, delay)
+    }
+  }, [])
+  return { handleSetOffset, isVisibleElement, currentTop }
+}
+
+export default useDetection
