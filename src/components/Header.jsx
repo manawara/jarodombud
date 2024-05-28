@@ -17,7 +17,7 @@ const Header = () => {
           <div className="hidden md:block">
             <Button type="button">Contact us</Button>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden z-40">
             <Hamburger color="#C73659" toggled={isOpen} toggle={setOpen} />
           </div>
         </div>
