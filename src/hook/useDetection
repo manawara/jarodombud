@@ -18,7 +18,7 @@ const useDetection = (delay = 300) => {
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [offsetElement])
+  }, [offsetElement, currentTop, delay])
 
   const handleSetOffset = useCallback((value) => {
     setOffsetElement(value)

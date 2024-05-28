@@ -7,7 +7,6 @@ function App() {
       <main>
         <Outlet />
       </main>
-      <div className="h-[600px]">sddsss</div>
     </>
   )
 }

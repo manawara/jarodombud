@@ -13,6 +13,15 @@ export default {
       transitionTimingFunction: {
         'out-expo': 'cubic-bezier(.29,.98,.83,.67)',
       },
+      animation: {
+        'slide-in': 'slideIn 0.3s both',
+      },
+      keyframes: {
+        slideIn: {
+          '0%': { transform: 'translateX(-100px)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
   },
   plugins: [],
