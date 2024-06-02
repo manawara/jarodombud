@@ -14,7 +14,7 @@ const TimeLine = ({ data }) => {
         data.map((item, index) => (
           <div
             key={item.title}
-            className="flex flex-col items-center min-w-[250px] max-w-72 text-center before:block after:content-[''] after:w-full after:h-[1px] after:bg-white after:-translate-y-[6px]"
+            className="flex flex-col items-center min-w-[290px] text-center before:block after:content-[''] after:w-full after:h-[1px] after:bg-white after:-translate-y-[6px]"
           >
             <p className=" px-8">{item.title}</p>
             <span className="my-2">Step {index + 1}</span>
